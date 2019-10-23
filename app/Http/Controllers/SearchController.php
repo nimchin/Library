@@ -10,7 +10,7 @@ class SearchController extends Controller
 {
     public function index(Request $request)
     {
-        dd($request->user());
+
         $searchedText = $request->searched_text;
         if($searchedText)
         {
