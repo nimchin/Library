@@ -12,9 +12,12 @@ class BookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $book = Book::where('id', $request->id)->first();
+        return view('books.index', [
+            'book'  => $book,
+        ]);
     }
 
     /**

@@ -20,3 +20,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/search', 'SearchController@index')->name('search');
+Route::get('/books/{id}', 'BookController@index')->name('book');

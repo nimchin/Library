@@ -20,7 +20,10 @@
                             <div class="book_author">{{$book->author}}</div>
                             <div class="book_topic">{{$book->topic}}</div>
                             <div class="book_year">{{$book->year}}</div>
-                            <img src="{{asset($book->img)}}" alt="">
+                            <img src="{{asset($book->img)}}" alt="{{$book->name}}">
+                            @if(Auth::user()->role_id == 1)
+                                <a href="{{route('book', ['id' => $book->id])}}"><button>View</button></a>
+                            @endif
                             <hr>
                         @endforeach
                     </table>
