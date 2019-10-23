@@ -6,8 +6,10 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="search">
-                    <input type="text" name="searched_text" placeholder="Search...">
-                    <input type="submit" name="send" value="Send">
+                    <form action="{{route('search')}}">
+                        <input type="text" name="searched_text" placeholder="Search...">
+                        <input type="submit">
+                    </form>
                 </div>
                 <div class="card-header">Books</div>
 
@@ -15,8 +17,11 @@
                     <table>
                         @foreach($books as $book)
                             <div class="book_name">{{$book->name}}</div>
-                            <img src="{{asset('/img/book1.jpg')}}" alt="">
-                            <div class="author">{{$book->author}}</div>
+                            <div class="book_author">{{$book->author}}</div>
+                            <div class="book_topic">{{$book->topic}}</div>
+                            <div class="book_year">{{$book->year}}</div>
+                            <img src="{{asset($book->img)}}" alt="">
+                            <hr>
                         @endforeach
                     </table>
                 </div>
