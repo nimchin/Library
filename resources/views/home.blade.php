@@ -11,12 +11,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="search">
-                    <form action="{{route('search')}}">
-                        <input type="text" name="searched_text" placeholder="Search...">
-                        <input type="submit">
-                    </form>
-                </div>
+
                 <div class="card-header">Books</div>
 
                 <div class="card-body">

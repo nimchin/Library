@@ -34,7 +34,12 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <div class="search">
+                            <form action="{{route('search')}}">
+                                <input type="text" name="searched_text" placeholder="Search...">
+                                <input type="submit">
+                            </form>
+                        </div>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -73,7 +78,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4" style="background: url({{asset('img/background.jpg')}}) repeat-y">
             @yield('content')
         </main>
     </div>
