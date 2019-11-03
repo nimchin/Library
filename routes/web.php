@@ -24,3 +24,6 @@ Route::get('/books/view/{id}', 'BookController@index')->name('book');
 Route::get('/books/order/{id}', 'BookController@orderBook')->name('book_order');
 Route::get('/cart', 'HomeController@cart')->name('cart');
 Route::get('/delete_order/{book_id}', 'HomeController@deleteOrder')->name('delete_order');
+Route::get('/admin/menu', 'AdminMenuController@index')->name('admin_menu');
+Route::get('/admin/add_user', 'AdminMenuController@addUser')->name('add_user');
+Route::get('/admin/search_user', 'AdminMenuController@searchUser')->name('search_user');
