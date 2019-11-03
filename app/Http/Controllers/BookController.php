@@ -19,7 +19,7 @@ class BookController extends Controller
     {
         $book = Book::where('id', (int)$request->id)->first();
         return view('books.index', [
-            'book'  => $book,
+            'book'  => $book ?? null,
         ]);
     }
 

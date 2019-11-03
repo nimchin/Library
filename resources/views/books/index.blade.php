@@ -5,6 +5,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="container">
+                    @if($book)
                     <div class="book_content">
                         <img src="{{asset($book->img)}}" alt="{{$book->name}}">
                         <div class="book_info">
@@ -19,7 +20,9 @@
                             @endif
                         </div>
                     </div>
-
+                    @else
+                        @include('errors.404')
+                    @endif
                 </div>
             </div>
         </div>
@@ -28,5 +31,5 @@
 
 
 @section('scripts')
-    <script type="text/javascript" src="{{mix('js/books.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/books.js')}}"></script>
 @endsection
