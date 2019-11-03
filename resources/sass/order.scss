@@ -2,4 +2,29 @@
   display: flex;
   padding-bottom: 5px;
   padding-top: 5px;
+  .book_info {
+    width: 100%;
+    padding-left: 20px;
+    .order_title {
+      display: flex;
+      justify-content: space-between;
+    }
+    .delete_order {
+      padding-top: 5px;
+    }
+    .order_book_name {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .order_book_author {
+      font-style: italic;
+    }
+    .order_book_count {
+      float: right;
+      padding-top: 70px;
+    }
+  }
+}
+.empty_cart {
+  text-align: center;
 }

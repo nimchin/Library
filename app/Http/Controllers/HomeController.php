@@ -32,10 +32,34 @@ class HomeController extends Controller
         ]);
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function cart(Request $request) {
         $orders = $request->user()->orders()->get();
+        $sameOrder = $orders->first();
+        foreach($orders as $order) {
+            if($order->book_id == $sameOrder->book_id) {
+                $sameOrders[] = $order;
+                $sameOrder = $order;
+            }
+            else {
+                $uniqueOrders[] = $order;
+            }
+        }
+        $allOrders['sameOrders'] = $sameOrders ?? null;
+        $allOrders['uniqueOrders'] = $uniqueOrders ?? null;
+
         return view('cart.index')->with([
-            'orders'    => $orders ?? null,
+            'orders'    => $allOrders ?? null,
         ]);
+    }
+    public function deleteOrder(Request $request)
+    {
+        if($request->book_id) {
+            Order::where('book_id', (int)$request->book_id)->delete();
+        }
+        return redirect()->route('cart');
     }
 }
