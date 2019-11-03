@@ -1,5 +1,5 @@
 .py-4 {
-  min-height: 70vh;
+  min-height: 80vh;
 }
 .card {
   min-height: 40vh;
@@ -18,11 +18,78 @@
     }
   }
 }
+
+.button8 {
+  display: inline-block;
+  color: black;
+  font-weight: 700;
+  text-decoration: none;
+  user-select: none;
+  padding: .5em 2em;
+  outline: none;
+  border: 2px solid;
+  border-radius: 1px;
+  transition: 0.2s;
+  margin-left: 12px;
+}
+.button8:hover { background: rgba(255,255,255,.2); }
+.button8:active { background: white; }
+
+.search {
+  padding-left: 41px;
+}
+.search_input {
+  border: 1px solid;
+  border-radius: 1px;
+}
+.search_button {
+  height: 27px;
+  display: inline-block;
+  color: black;
+  font-weight: 400;
+  text-decoration: none;
+  user-select: none;
+  background-color: white;
+  outline: none;
+  border: 1px solid;
+  border-radius: 1px;
+  transition: 0.2s;
+  padding-top: 1.5px
+}
+.search_button:hover { background: rgba(255,255,255,.2); }
+.search_button:active { background: gray; }
+
+.admin_menu {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
 footer {
   min-height: 100vh;
   bottom: 0;
   background: black;
-
+  .footer_img {
+    text-align: center;
+  }
+  .map {
+    padding-top: 30px;
+    padding-left: 150px;
+  }
+  .contacts {
+    display: flex;
+  }
+  .contacts_info {
+    padding-top: 30px;
+    padding-left: 100px;
+    width: 50%;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 30px;
+    color: lightgrey;
+  }
+  .contact_number {
+    padding-top: 10px;
+    font-size: 18px;
+  }
   .footer {
     color: lightgrey;
     padding-top: 30px;
