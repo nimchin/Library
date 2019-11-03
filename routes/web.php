@@ -22,3 +22,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/search', 'SearchController@index')->name('search');
 Route::get('/books/view/{id}', 'BookController@index')->name('book');
 Route::get('/books/order/{id}', 'BookController@orderBook')->name('book_order');
+Route::get('/cart', 'HomeController@cart')->name('cart');

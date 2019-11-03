@@ -15,22 +15,29 @@
                 <div class="card-header">Books</div>
 
                 <div class="card-body">
+                    <div class="content">
                     <table>
                         @foreach($books as $book)
-                            <div class="book_name">{{$book->name}}</div>
-                            <div class="book_author">{{$book->author}}</div>
-                            <div class="book_topic">{{$book->topic}}</div>
-                            <div class="book_year">{{$book->year}}</div>
-                            <img src="{{asset($book->img)}}" alt="{{$book->name}}">
-                            @if(Auth::user()->role_id == 1)
-                                <a href="{{route('book', ['id' => $book->id])}}"><button>View</button></a>
-                            @endif
-                            <hr>
+                            <div class="book_content">
+                                <img src="{{asset($book->img)}}" alt="{{$book->name}}">
+                                <div class="book_info">
+                                    <div class="book_name">{{$book->name}}</div>
+                                    <div class="book_author">{{$book->author}}</div>
+                                    <div class="book_topic">{{$book->topic}}</div>
+                                    <div class="book_year">{{$book->year}}</div>
+                                    @if(Auth::user()->role_id == 1)
+                                        <a href="{{route('book', ['id' => $book->id])}}"><button>View</button></a>
+                                    @endif
+                                </div>
+                            </div>
                         @endforeach
                     </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
+
+

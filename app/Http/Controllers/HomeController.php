@@ -31,4 +31,11 @@ class HomeController extends Controller
             'books' => $books,
         ]);
     }
+
+    public function cart(Request $request) {
+        $orders = $request->user()->orders()->get();
+        return view('cart.index')->with([
+            'orders'    => $orders ?? null,
+        ]);
+    }
 }
