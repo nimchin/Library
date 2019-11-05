@@ -23,6 +23,7 @@
     @yield('css')
 </head>
 <body>
+    <div class="wrapper">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -93,24 +94,44 @@
         <main class="py-4" style="background: url({{asset('img/background.jpg')}}) repeat-y">
             @yield('content')
         </main>
-    </div>
-@yield('scripts')
-</body>
-<footer>
-    <div class="footer_img">
-        <img src="{{asset('img/footer_line.png')}}" height="80" width="80%" alt="">
-    </div>
-    <div class="contacts">
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8990.304378634853!2d30.42908997321109!3d50.439231977841644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc19611bed05%3A0x193f71dcd11c83ae!2z0YPQuy4g0JPQsNGA0LzQsNGC0L3QsNGPLCA1MSwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1572820624214!5m2!1sru!2sua" width="700" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-    <div class="contacts_info">
-        {{'Contacts'}}
-        <div class="contact_number">
-            {{'+38(066)107-42-53'}}
+
+    <footer>
+        <div class="footer">
+            <div class="footer_img">
+                <img src="{{asset('img/footer_line.png')}}" height="80" width="80%" alt="">
+            </div>
+            <div class="contacts">
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8990.304378634853!2d30.42908997321109!3d50.439231977841644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc19611bed05%3A0x193f71dcd11c83ae!2z0YPQuy4g0JPQsNGA0LzQsNGC0L3QsNGPLCA1MSwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1572820624214!5m2!1sru!2sua" width="700" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                <div class="contacts_info">
+                    <div class="footer_title">{{'Контакти'}}</div>
+                    <div class="contact_number">
+                        <div class="phone_icon">
+                            <img src="{{asset('img/icons/phone.png')}}" height="15" width="15" alt="">
+                        </div>
+                        <div class="phone_number">{{'+38(066)107-42-53'}}</div>
+                    </div>
+                    <div class="email">
+                        <div class="email_icon">
+                            <img src="{{asset('img/icons/email.jpg')}}" height="30" width="30" alt="">
+                        </div>
+                        <div class="email_address">
+                            {{'nimchin.maksim@gmail.com'}}
+                        </div>
+                    </div>
+
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                    <div class="social_network_icons">
+                        <a href="https://www.facebook.com/nimchinmax" class="fa fa-facebook"></a>
+                        <a href="https://twitter.com" class="fa fa-twitter"></a>
+                        <a href="https://instagram.com/nimchin_m" class="fa fa-instagram"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="rights">&copy; 2019 Copyrighted by Max Nimchin</div>
         </div>
+    </footer>
     </div>
     </div>
-    <div class="footer">
-        &copy; 2019 Copyrighted by Max Nimchin
-    </div>
-</footer>
+    @yield('scripts')
+</body>
 </html>

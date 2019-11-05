@@ -64,10 +64,26 @@
   justify-content: center;
   padding-top: 50px;
 }
-footer {
+.footer {
   min-height: 100vh;
+  width: 100%;
   bottom: 0;
   background: black;
+  color: lightgrey;
+  padding-top: 30px;
+  .footer_title {
+    padding-top: 30px;
+    padding-left: 100px;
+    width: 50%;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 30px;
+    color: lightgrey;
+    text-align: left;
+  }
+  .contact_number {
+    display:flex;
+    padding-left: 100px;
+  }
   .footer_img {
     text-align: center;
   }
@@ -77,22 +93,67 @@ footer {
   }
   .contacts {
     display: flex;
+    flex-wrap: wrap;
+    .contact_number {
+      padding-top: 10px;
+      font-size: 18px;
+    }
+    .phone_number {
+      padding-left: 10px;
+    }
   }
-  .contacts_info {
-    padding-top: 30px;
-    padding-left: 100px;
-    width: 50%;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 30px;
-    color: lightgrey;
-  }
-  .contact_number {
+  .email {
     padding-top: 10px;
-    font-size: 18px;
+    display: flex;
+    .email_icon {
+      padding-left: 95px;
+    }
+    .email_address {
+      padding-top: 2px;
+    }
   }
-  .footer {
-    color: lightgrey;
-    padding-top: 30px;
+  .rights {
+    padding-top: 50px;
     text-align: center;
   }
+  .social_network_icons {
+    padding-top: 30px;
+    padding-left: 100px;
+    .fa {
+      padding: 20px;
+      font-size: 20px;
+      text-align: center;
+      text-decoration: none;
+    }
+    .fa:hover {
+      opacity: 0.7;
+    }
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    .fa-instagram {
+      background: #125688;
+      color: white;
+    }
+  }
+}
+
+/** User add admin menu page **/
+.user_add_form_container {
+  .label {
+    text-align: left;
+  }
+}
+.user_add_form {
+  display: flex;
+  flex-direction: column;
+}
+.add_user_button {
+  text-align: center;
+  padding-top: 20px;
 }
