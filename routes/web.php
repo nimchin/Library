@@ -27,4 +27,5 @@ Route::get('/delete_order/{book_id}', 'HomeController@deleteOrder')->name('delet
 Route::get('/admin/menu', 'AdminMenuController@index')->name('admin_menu');
 Route::get('/admin/add_user', 'AdminMenuController@addUser')->name('add_user');
 Route::get('/admin/search_user', 'AdminMenuController@searchUser')->name('search_user');
+Route::post('/admin/search_user', 'AdminMenuController@searchUser')->name('search_user');
 Route::post('/admin/store_user', 'AdminMenuController@storeUser')->name('store_user');

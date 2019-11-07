@@ -157,3 +157,19 @@
   text-align: center;
   padding-top: 20px;
 }
+
+/* Search user page */
+.user_search {
+  text-align: center;
+}
+.user {
+  .name {
+    font-size: 30px;
+  }
+  .email {
+    font-size: 15px;
+  }
+  .registration_date {
+    color: gray;
+  }
+}

@@ -41,7 +41,7 @@
                         <div class="search">
                             <form action="{{route('search')}}">
                                 <input class="search_input" type="text" name="searched_text" placeholder="Search...">
-                                <input class="search_button" type="submit">
+                                <input class="search_button" type="submit" value="{{__('app.search')}}">
                             </form>
                         </div>
                     </ul>
