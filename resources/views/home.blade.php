@@ -29,6 +29,7 @@
                                 </div>
                             </div>
                         @endforeach
+                        <div class="pagination">{{$books->links()}}</div>
                     </table>
                     </div>
                 </div>

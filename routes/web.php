@@ -29,3 +29,5 @@ Route::get('/admin/add_user', 'AdminMenuController@addUser')->name('add_user');
 Route::get('/admin/search_user', 'AdminMenuController@searchUser')->name('search_user');
 Route::post('/admin/search_user', 'AdminMenuController@searchUser')->name('search_user');
 Route::post('/admin/store_user', 'AdminMenuController@storeUser')->name('store_user');
+Route::get('/admin/add_book', 'AdminMenuController@createBook')->name('create_book');
+Route::post('/admin/store_book', 'AdminMenuController@storeBook')->name('store_book');

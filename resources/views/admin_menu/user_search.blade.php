@@ -21,6 +21,7 @@
                                 <div class="registration_date">{{$user->created_at}}</div>
                                 <hr>
                             @endforeach
+                            <div class="pagination">{{$users->links()}}</div>
                         </div>
                     </div>
                 </div>

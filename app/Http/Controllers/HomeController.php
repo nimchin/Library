@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
 use App\Book;
 use App\Order;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -26,7 +27,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $books = Book::all();
+        $books = DB::table('books')->paginate(3);
         return view('home', [
             'books' => $books,
         ]);

@@ -9,12 +9,12 @@
                     <div class="card-body">
                         <div class="content">
                             <div class="admin_menu">
-                            @if(auth()->user()->id == App\Role::ARCHIVE_ADMIN_ROLE_ID)
+                            @if(auth()->user()->role_id == App\Role::ARCHIVE_ADMIN_ROLE_ID)
                                 <a href="{{route('add_user')}}" class="button8">Додати користувача</a>
                                 <a href="{{route('search_user')}}" class="button8">Пошук по користувачам</a>
-                            @elseif(auth()->user()->id == App\Role::ARCHIVE_ADMIN_ROLE_ID)
-                                <a href=""><button>Додати книгу</button></a>
-                                <a href=""><button>Видалити книгу</button></a>
+                            @elseif(auth()->user()->role_id == App\Role::HALL_ADMIN_ROLE_ID)
+                                <a href="{{route('create_book')}}" class="button8">Додати книгу</a>
+                                <a href="" class="button8">Видалити книгу</a>
                             @endif
                             </div>
                         </div>
