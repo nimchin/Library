@@ -17,6 +17,7 @@ mix
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/home.scss', 'public/css')
     .sass('resources/sass/order.scss', 'public/css')
+    .sass('resources/sass/delete_books.scss', 'public/css')
     .options({
         processCssUrls: false
     })

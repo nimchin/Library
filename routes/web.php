@@ -31,3 +31,5 @@ Route::post('/admin/search_user', 'AdminMenuController@searchUser')->name('searc
 Route::post('/admin/store_user', 'AdminMenuController@storeUser')->name('store_user');
 Route::get('/admin/add_book', 'AdminMenuController@createBook')->name('create_book');
 Route::post('/admin/store_book', 'AdminMenuController@storeBook')->name('store_book');
+Route::get('/admin/delete_books', 'AdminMenuController@deleteBooks')->name('delete_books');
+Route::get('/admin/delete_book', 'AdminMenuController@deleteBook')->name('delete_book');

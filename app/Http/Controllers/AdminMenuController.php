@@ -92,4 +92,23 @@ class AdminMenuController extends Controller
         $book->save();
         return redirect()->back()->with('success', true)->with('message', Lang::get('admin_menu.book_created'));
     }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function deleteBooks(Request $request) {
+        $books = DB::table('books')->paginate(3);
+        return view('admin_menu.delete_book')->with(['books' => $books]);
+    }
+
+    public function deleteBook(Request $request)
+    {
+        if($request->id)
+        {
+            $book = Book::where('id', (int)$request->id)->first();
+            $book->delete();
+        }
+        return redirect()->back()->with('success', true)->with('message', Lang::get('admin_menu.book_deleted'));
+    }
 }
