@@ -65,7 +65,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    @if(auth()->user()->id == App\Role::ARCHIVE_ADMIN_ROLE_ID)
+                                    @if(auth()->user()->id == App\Role::USER_ROLE_ID)
                                         <a class="dropdown-item" href="{{ route('cart') }}">
                                             {{ __('app.Cart') }}
                                         </a>

@@ -37,8 +37,25 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function orders()
     {
         return $this->hasMany('App\Order', 'user_id', 'id');
+    }
+
+    /**
+     * @param $role
+     * @return mixed
+     */
+    public function hasRole($role)
+    {
+        $role = Role::where('name', $role)->first();
+        if($role)
+            if($this->role_id === $role->id)
+                return true;
+        else
+            return false;
     }
 }
