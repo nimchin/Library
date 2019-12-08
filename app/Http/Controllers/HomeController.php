@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\URL;
 use App\Book;
 use App\Order;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\App;
 
 class HomeController extends Controller
 {
@@ -62,5 +63,16 @@ class HomeController extends Controller
             Order::where('book_id', (int)$request->book_id)->delete();
         }
         return redirect()->route('cart');
+    }
+
+    public function setLocaleUA()
+    {
+        app()->setLocale('ua');
+        return redirect()->back();
+    }
+    public function setLocaleEng()
+    {
+        app()->setLocale('en');
+        return redirect()->back();
     }
 }

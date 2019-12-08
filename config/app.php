@@ -228,4 +228,6 @@ return [
 
     ],
 
+    /* Logging */
+    'log' => 'single',
 ];

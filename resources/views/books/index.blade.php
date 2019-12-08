@@ -13,7 +13,7 @@
                             <div class="book_author">{{$book->author}}</div>
                             <div class="book_topic">{{$book->topic}}</div>
                             <div class="book_year">{{$book->year}}</div>
-                            @if(Auth::user()->role_id == \App\Role::USER_ROLE_ID || Auth::user()->role_id == \App\Role::USER_ROLE_ID)
+                            @if(Auth::user()->role_id == \App\Role::USER_ROLE_ID)
                                 <form action="{{route('book_order', $book->id)}}">
                                     <input type="submit" value="Order">
                                 </form>

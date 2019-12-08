@@ -48,6 +48,14 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <li class="navbar-item">
+                            <a class="nav-link" href="{{route('set_locale_ua')}}">{{'ua'}}</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link" href="{{route('set_locale_en')}}">{{'en'}}</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
