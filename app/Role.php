@@ -18,14 +18,14 @@ class Role extends Model
      */
     public static function getRoleById($id) {
         switch($id) {
-            case '1':
+            case 1:
                 return __('app.roles.archive_admin');
-            case '2':
+            case 2:
                 return __('app.roles.hall_admin');
-            case '3':
+            case 3:
                 return __('app.roles.user');
             default:
-                return '-';
+                return false;
         }
     }
 }
