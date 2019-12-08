@@ -24,7 +24,7 @@
                                     <div class="book_topic">{{$book->topic}}</div>
                                     <div class="book_year">{{$book->year}}</div>
                                     @if(Auth::user()->role_id == \App\Role::USER_ROLE_ID)
-                                        <a href="{{route('book', ['id' => $book->id])}}"><button>View</button></a>
+                                        <a href="{{route('book', ['id' => $book->id])}}"><button>@lang('books.view')</button></a>
                                     @endif
                                 </div>
                             </div>

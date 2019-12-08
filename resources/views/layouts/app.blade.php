@@ -49,10 +49,10 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <li class="navbar-item">
-                            <a class="nav-link" href="{{route('set_locale_ua')}}">{{'ua'}}</a>
+                            <a class="nav-link" href="{{route('set_locale', ['locale'=>'ua'])}}">{{'ua'}}</a>
                         </li>
                         <li class="navbar-item">
-                            <a class="nav-link" href="{{route('set_locale_en')}}">{{'en'}}</a>
+                            <a class="nav-link" href="{{route('set_locale', ['locale'=>'en'])}}">{{'en'}}</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ml-auto">
@@ -111,7 +111,7 @@
             <div class="contacts">
                 <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8990.304378634853!2d30.42908997321109!3d50.439231977841644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc19611bed05%3A0x193f71dcd11c83ae!2z0YPQuy4g0JPQsNGA0LzQsNGC0L3QsNGPLCA1MSwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1572820624214!5m2!1sru!2sua" width="700" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 <div class="contacts_info">
-                    <div class="footer_title">{{'Контакти'}}</div>
+                    <div class="footer_title">@lang('app.contacts')</div>
                     <div class="contact_number">
                         <div class="phone_icon">
                             <img src="{{asset('img/icons/phone.png')}}" height="15" width="15" alt="">

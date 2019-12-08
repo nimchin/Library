@@ -15,7 +15,7 @@
                             <div class="book_year">{{$book->year}}</div>
                             @if(Auth::user()->role_id == \App\Role::USER_ROLE_ID)
                                 <form action="{{route('book_order', $book->id)}}">
-                                    <input type="submit" value="Order">
+                                    <input type="submit" value="{{\Illuminate\Support\Facades\Lang::get('books.order')}}">
                                 </form>
                             @endif
                         </div>

@@ -6,6 +6,7 @@ return [
     'Cart'      => 'Cart',
     'admin_menu'=> 'Admin Menu',
     'search'    => 'Search',
+    'contacts'  => 'Contacts',
 
     'roles' => [
         'hall_admin'    => 'Hall administrator',

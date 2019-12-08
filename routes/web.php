@@ -14,8 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index');
-Route::get('/ua', 'HomeController@setLocaleUA')->name('set_locale_ua');
-Route::get('/en', 'HomeCOntroller@setLocaleEng')->name('set_locale_en');
+Route::get('setLocale/{locale}', function ($locale){
+    if(in_array($locale, config('app.locales')))
+        session(['locale' => $locale]);
+    return redirect()->back();
+})->name('set_locale');
 
 Auth::routes();
 

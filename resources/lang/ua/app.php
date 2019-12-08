@@ -6,6 +6,7 @@ return [
     'Cart'      => 'Кошик',
     'admin_menu'=> 'Адмін меню',
     'search'    => 'Пошук',
+    'contacts'  => 'Контакти',
 
     'roles' => [
         'hall_admin'    => 'Адміністратор залу',
