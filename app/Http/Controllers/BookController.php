@@ -31,7 +31,7 @@ class BookController extends Controller
             $order = new Order();
             $order->user_id = Auth::user()->id;
             $order->book_id = $request->id;
-            if(Book::where('id', $order->book_id)->first()->count_of_books < 0)
+            if(Book::where('id', $order->book_id)->first()->count_of_books > 0)
                 Log::info('User ['. $request->user()->id . '] ordered item [' . $order->book_id .'], but there are no available items');
             $order->save();
             return redirect()->route('home')->with('success', true)->with('message', Lang::get('books.thanks_for_order'));

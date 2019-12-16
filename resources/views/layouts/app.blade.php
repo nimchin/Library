@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/home.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -48,10 +49,10 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <li class="navbar-item">
+                        <li class="navbar-item locale">
                             <a class="nav-link" href="{{route('set_locale', ['locale'=>'ua'])}}">{{'ua'}}</a>
                         </li>
-                        <li class="navbar-item">
+                        <li class="navbar-item locale">
                             <a class="nav-link" href="{{route('set_locale', ['locale'=>'en'])}}">{{'en'}}</a>
                         </li>
                     </ul>
